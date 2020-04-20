@@ -18,8 +18,11 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            App Heading
+            Covid Stats
           </Typography>
+          <Link className={classes.link} to="/">
+            Home
+          </Link>
           <Link className={classes.link} to="/about">
             About
           </Link>
@@ -42,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: "white",
     textDecoration: "none",
+    margin: 5,
   },
 }));
 
