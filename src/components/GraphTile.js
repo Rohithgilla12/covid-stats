@@ -56,11 +56,13 @@ const GraphTile = (props) => {
             <ResponsiveContainer height={300}>
               <AreaChart data={props.data}>
                 <XAxis
+                  padding={{ left: 10 }}
                   dataKey={"reportDate"}
                   value="Date"
                   stroke="white"
-                  interval={5}
+                  interval={10}
                   tickSize={1}
+                  ticks={false}
                   tickFormatter={(tick) => tick.replace("2020-", "")}
                 />
                 <Label value="Date" offset={0} position="insideBottom" />
