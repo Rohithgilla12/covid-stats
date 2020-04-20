@@ -2,7 +2,6 @@ import React from "react";
 import {
   Area,
   AreaChart,
-  CartesianGrid,
   Label,
   ResponsiveContainer,
   Tooltip,
@@ -56,7 +55,6 @@ const GraphTile = (props) => {
             <ResponsiveContainer height={300}>
               <AreaChart data={props.data}>
                 <XAxis
-                  padding={{ left: 10 }}
                   dataKey={"reportDate"}
                   value="Date"
                   stroke="white"
