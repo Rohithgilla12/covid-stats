@@ -2,6 +2,15 @@ import useSWR from "swr";
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Paper, Typography } from "@material-ui/core";
+import styled from "styled-components";
+
+export const StatCard = styled.div`
+  flex: 1;
+  border-radius: 20px;
+  background: linear-gradient(#20033c 0%, #070000 100%);
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.53);
+  margin: 10px;
+`;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,28 +39,28 @@ const WorldStats = () => {
         <div className={classes.root}>
           <Grid container spacing={3}>
             <Grid item xs>
-              <Paper className={classes.paper} style={{ color: "#00CCCD" }}>
+              <StatCard className={classes.paper} style={{ color: "#eada0a" }}>
                 <Typography variant="h5" component="h5">
                   Active
                 </Typography>
                 {generalDetails.confirmed.value}
-              </Paper>
+              </StatCard>
             </Grid>
             <Grid item xs>
-              <Paper className={classes.paper} style={{ color: "#45CE30" }}>
+              <StatCard className={classes.paper} style={{ color: "#00ef00" }}>
                 <Typography variant="h5" component="h5">
                   Recovered
                 </Typography>
                 {generalDetails.recovered.value}
-              </Paper>
+              </StatCard>
             </Grid>
             <Grid item xs>
-              <Paper className={classes.paper} style={{ color: "#FF4848" }}>
+              <StatCard className={classes.paper} style={{ color: "#958686" }}>
                 <Typography variant="h5" component="h5">
                   Death
                 </Typography>
                 {generalDetails.deaths.value}
-              </Paper>
+              </StatCard>
             </Grid>
           </Grid>
         </div>

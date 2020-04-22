@@ -27,7 +27,7 @@ const WorldGraphs = () => {
             <GraphTile
               data={dailyData}
               dataKey={confirmCount}
-              fill={"#00CCCD"}
+              fill={"#eada0a"}
               title="Total Cases"
             />
           </Grid>
@@ -35,7 +35,7 @@ const WorldGraphs = () => {
             <GraphTile
               data={dailyData}
               dataKey={deathCount}
-              fill={"#FF4848"}
+              fill={"#958686"}
               title="Total Deaths"
             />
           </Grid>
@@ -43,7 +43,7 @@ const WorldGraphs = () => {
             <GraphTile
               data={dailyData}
               dataKey={recoveredCount}
-              fill={"#45CE30"}
+              fill={"#00ef00"}
               title="Delta Confirmed"
             />
           </Grid>

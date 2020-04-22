@@ -16,6 +16,19 @@ const ToolTipWrapper = styled.div`
   color: black;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 `;
+
+const GradCard = styled.div`
+  border-radius: 25px;
+  background: linear-gradient(#20033c 0%, #303 100%);
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.53);
+  height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+`;
+
 const formatYAxis = (tickItem) => {
   return `${tickItem / 1000}K`;
 };
@@ -50,7 +63,7 @@ const GraphTile = (props) => {
     <div className={classes.root}>
       <Grid container>
         <Grid item style={{ width: "98vw" }}>
-          <Paper>
+          <GradCard>
             {props.title}
             <ResponsiveContainer height={300}>
               <AreaChart data={props.data}>
@@ -79,7 +92,7 @@ const GraphTile = (props) => {
                 <Tooltip content={CustomTooltip} />
               </AreaChart>
             </ResponsiveContainer>
-          </Paper>
+          </GradCard>
         </Grid>
       </Grid>
     </div>

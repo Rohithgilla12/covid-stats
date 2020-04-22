@@ -7,7 +7,7 @@ const Navbar = () => {
   const classes = useStyles();
   return (
     <Router>
-      <AppBar position="static">
+      <AppBar position="static" style={{ backgroundColor: "#260926" }}>
         <Toolbar>
           <IconButton
             className={classes.menuButton}
